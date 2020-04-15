@@ -23,3 +23,10 @@ def show_post(post_id):
 def show_subpath(subpath):
     # show the subpath after /path/
     return 'Subpath %s' % escape(subpath)
+
+@app.route("/me")
+def me_api():
+    tel = {'jack': 4098, 'sape': 4139}
+    return {
+        "name": tel['jack'],
+    }
